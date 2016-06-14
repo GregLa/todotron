@@ -1,0 +1,10 @@
+body[ng-cloak] {
+    display:none;
+}
+.box-height {
+    box-sizing: border-box;
+    height: 100%;
+}
+.done{
+    text-decoration: line-through;
+}

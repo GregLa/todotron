@@ -1,0 +1,17 @@
+{
+  "name": "pole-emploi-application-pc",
+  "version": "0.0.1",
+  "description": "This application wrapper is used by Pole Emploi's MRS departement to organize, administrate and start training sessions.",
+  "main": "main.js",
+  "author": {
+    "name": "Grégoire Lagoutte",
+    "email": "gregoire.lagoutte@itycom.com"
+  },
+  "license": "ITycom SAS",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-material": "^1.0.9",
+    "angular-ui-router": "^0.3.1",
+    "q": "1.0.1"
+  }
+}

@@ -1,0 +1,30 @@
+<!-- partials/active-todos.html -->
+<md-toolbar class="md-theme-light">
+    <h2 class="md-toolbar-tools">
+        <span>Add a todo</span>
+    </h2>
+</md-toolbar>
+
+<div layout="row" layout-align="space-around center">
+    <md-input-container md-no-float class="md-block" flex="50">
+        <input ng-model="todo.text" placeholder="Todo">
+    </md-input-container>
+    <md-button class="md-raised md-primary" ng-click="addTodo()">Add to todo list</md-button>
+</div>
+
+<md-content>
+    <md-toolbar class="md-theme-light">
+        <h2 class="md-toolbar-tools">
+            <span>Todo list</span>
+        </h2>
+    </md-toolbar>
+    <md-list flex>
+        <md-list-item class="secondary-button-padding" ng-repeat="todo in todos">
+            <md-checkbox ng-model="todo.done" aria-label="Done">
+            </md-checkbox>
+            <h3 ng-class="{done : todo.done}">{{ todo.text }}</h3>
+            <md-button ng-if="todo.done" class="md-secondary" ng-click="archiveTodo($event, todo._id)">Archive this todo</md-button>
+            <md-divider></md-divider>
+        </md-list-item>
+    </md-list>
+</md-content>

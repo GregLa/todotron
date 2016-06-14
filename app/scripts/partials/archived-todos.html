@@ -1,0 +1,13 @@
+<!-- partials/archived-todos.html -->
+<md-toolbar class="md-theme-light">
+    <h2 class="md-toolbar-tools">
+        <span>Archived todo list</span>
+    </h2>
+</md-toolbar>
+<md-list flex>
+    <md-list-item class="secondary-button-padding" ng-repeat="todo in archivedTodos">
+        <h3>{{ todo.text }}</h3>
+        <md-button class="md-secondary" ng-click="deleteTodo($event, todo._id)">Delete this todo</md-button>
+        <md-divider></md-divider>
+    </md-list-item>
+</md-list>

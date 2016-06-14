@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo'tron</title>
+    <meta charset="utf-8">
+    <!-- build:css assets/css/style.min.css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- endbuild -->
+
+</head>
+<body layout="row" ng-app="app" ng-controller="todoController" ng-cloak>
+
+    <div flex="30" layout="column" class="box-height">
+        <div flex>
+            <md-toolbar class="md-theme-light">
+                <h2 class="md-toolbar-tools">
+                    <span>Navigation</span>
+                </h2>
+            </md-toolbar>
+            <md-content>
+                <md-list flex>
+                    <md-list-item class="md-1-line" ng-click="null" ui-sref="active-todos">
+                        <div class="md-list-item-text">
+                            <h4>Todo list</h4>
+                        </div>
+                        <md-divider></md-divider>
+                    </md-list-item>
+                    <md-list-item class="md-1-line" ng-click="null" ui-sref="archived-todos">
+                        <div class="md-list-item-text">
+                            <h4>Archived todos</h4>
+                        </div>
+                        <md-divider></md-divider>
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </div>
+    </div>
+
+    <div flex layout="column" class="boxWithHeight" ui-view>
+
+    </div>
+
+    <!-- build:js scripts/vendor.min.js -->
+    <script src="bower_components/q/q.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/app.min.js -->
+    <script src="scripts/database.js"></script>
+    <script src="scripts/app.js"></script>
+    <!-- endbuild -->
+
+
+</body>
+</html>
